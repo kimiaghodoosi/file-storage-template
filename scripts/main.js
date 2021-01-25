@@ -1,8 +1,15 @@
+// Wait until all the page (document) is loaded
 $(document).ready(function() {
 
+  // Sending http request to get fake data for files list
+  // Request to file response.json which is formatted in JSON
   $.getJSON("response.json", function(data) {
+    // Define a list data-type to store an html-formatted table-row for each file item
     var rows = [];
+    // Iterate over JSON data using jquery each function. Each file's data is stored in a JSON list, indexing from 0.
     $.each(data, function(key, item) {
+      // Using a switch statement to set the appropriate class icon for each file type
+      // When it is: folder, picture, archive, audio. video or document file. The default icon will be a simple file icon.
       switch (item['type']) {
         case 'folder':
           icon = 'folder';
@@ -26,6 +33,7 @@ $(document).ready(function() {
           icon = 'file';
 
       }
+      // Creating html-formatted table row for each file
       var row = '<tr id="f'+item['id']+'">';
       row += '<td><span class="icon-text"><span class="icon"><i class="fas fa-'+icon+'"></i></span><span>'+item['name']+'</span></span></td>';
       row += '<td>'+item['owner']+'</td>';
@@ -34,8 +42,11 @@ $(document).ready(function() {
       row += '</tr>';
       rows.push(row);
     });
+    // Appending rows to the table body
     $(rows.join("")).appendTo("table#filemanitems > tbody")
 
+    // Making each row clickable by appending a click event to them.
+    // Setting is-selected class for each row in selected state, making it toggle.
     $('table#filemanitems tbody tr').click(function() {
       if (!$(this).hasClass('is-selected')) {
         $('table#filemanitems tbody tr').removeClass('is-selected');
@@ -47,8 +58,10 @@ $(document).ready(function() {
 });
 
 
+// Sort table columns
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  // Select table by its id
   table = document.getElementById("filemanitems");
   switching = true;
   // Set the sorting direction to ascending:
