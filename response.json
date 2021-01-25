@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": "folder",
+    "name": "New Folder",
+    "owner": "Admin",
+    "last-modified": "Jan 20, 2021",
+    "modified-by": "Admin",
+    "file-size": "-"
+  },
+  {
+    "id": 2,
+    "type": "folder",
+    "name": "Documents",
+    "owner": "Admin",
+    "last-modified": "Jan 20, 2021",
+    "modified-by": "Admin",
+    "file-size": "-"
+  },
+  {
+    "id": 3,
+    "type": "folder",
+    "name": "Uploaded PDFs",
+    "owner": "Admin",
+    "last-modified": "Jan 20, 2021",
+    "modified-by": "Admin",
+    "file-size": "-"
+  },
+  {
+    "id": 4,
+    "type": "picture",
+    "name": "Screenshot(2).jpg",
+    "owner": "Admin",
+    "last-modified": "Jan 18, 2021",
+    "modified-by": "Me",
+    "file-size": "520 KB"
+  },
+  {
+    "id": 5,
+    "type": "archive",
+    "name": "Users Backups.zip",
+    "owner": "Me",
+    "last-modified": "Jan 18, 2021",
+    "modified-by": "Me",
+    "file-size": "19.3 MB"
+  },
+  {
+    "id": 6,
+    "type": "document",
+    "name": "Registration Form.pdf",
+    "owner": "Admin",
+    "last-modified": "Jan 18, 2021",
+    "modified-by": "Me",
+    "file-size": "1.4 MB"
+  },
+  {
+    "id": 7,
+    "type": "video",
+    "name": "Screenrecord.mp4",
+    "owner": "Admin",
+    "last-modified": "Jan 18, 2021",
+    "modified-by": "Me",
+    "file-size": "25 MB"
+  },
+  {
+    "id": 8,
+    "type": "audio",
+    "name": "voice_12-jan-2021.mp3",
+    "owner": "Admin",
+    "last-modified": "Jan 18, 2021",
+    "modified-by": "Me",
+    "file-size": "3.8 MB"
+  }
+]
